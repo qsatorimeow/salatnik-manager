@@ -1,24 +1,36 @@
 {
- "updated_at": "12.11.2026 19:32 МСК",
+ "updated_at": "12.11.2026 20:02 МСК",
  "salatnik": {
   "chats": 16,
   "users": 13,
-  "messages": 2995,
-  "commands_total": 1,
+  "messages": 3272,
+  "commands_total": 8,
   "top_commands": [
    {
     "name": "info",
+    "value": 3
+   },
+   {
+    "name": "staff",
+    "value": 2
+   },
+   {
+    "name": "getban",
+    "value": 2
+   },
+   {
+    "name": "zov",
     "value": 1
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1223
+    "value": 1277
    },
    {
     "name": "Фармин М.",
-    "value": 589
+    "value": 676
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -26,7 +38,7 @@
    },
    {
     "name": "Axel S.",
-    "value": 252
+    "value": 262
    },
    {
     "name": "Марина К.",
@@ -41,16 +53,16 @@
     "value": 113
    },
    {
-    "name": "Диктаторский Ф.",
-    "value": 47
-   },
-   {
     "name": "Леха В.",
-    "value": 40
+    "value": 106
    },
    {
-    "name": "Блейз К.",
-    "value": 36
+    "name": "Диктаторский Ф.",
+    "value": 71
+   },
+   {
+    "name": "Бекжан С.",
+    "value": 46
    }
   ],
   "top_coins": [
@@ -129,8 +141,13 @@
  "events": {
   "finished": 4,
   "avg_minutes": 0,
-  "commands_total": 0,
-  "top_commands": [],
+  "commands_total": 6,
+  "top_commands": [
+   {
+    "name": "event",
+    "value": 6
+   }
+  ],
   "top_hosts": [
    {
     "name": "Алексей Б.",
