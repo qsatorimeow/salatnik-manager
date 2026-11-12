@@ -1,0 +1,144 @@
+{
+ "updated_at": "12.11.2026 19:22 МСК",
+ "salatnik": {
+  "chats": 16,
+  "users": 13,
+  "messages": 2985,
+  "commands_total": 0,
+  "top_commands": [],
+  "top_active": [
+   {
+    "name": "Алексей Б.",
+    "value": 1217
+   },
+   {
+    "name": "Фармин М.",
+    "value": 587
+   },
+   {
+    "name": "Νουρασύλ Λ.",
+    "value": 329
+   },
+   {
+    "name": "Axel S.",
+    "value": 252
+   },
+   {
+    "name": "Марина К.",
+    "value": 185
+   },
+   {
+    "name": "Игорь Г.",
+    "value": 137
+   },
+   {
+    "name": "Фея А.",
+    "value": 113
+   },
+   {
+    "name": "Диктаторский Ф.",
+    "value": 46
+   },
+   {
+    "name": "Леха В.",
+    "value": 40
+   },
+   {
+    "name": "Блейз К.",
+    "value": 36
+   }
+  ],
+  "top_coins": [
+   {
+    "name": "Блейз К.",
+    "value": 500672
+   },
+   {
+    "name": "Фармин М.",
+    "value": 110755
+   },
+   {
+    "name": "Νουρασύλ Λ.",
+    "value": 50702
+   },
+   {
+    "name": "Игорь Г.",
+    "value": 7965
+   },
+   {
+    "name": "Марина К.",
+    "value": 5749
+   },
+   {
+    "name": "Алексей Б.",
+    "value": 4124
+   },
+   {
+    "name": "Axel S.",
+    "value": 3244
+   },
+   {
+    "name": "Диктаторский Ф.",
+    "value": 790
+   },
+   {
+    "name": "Фея А.",
+    "value": 211
+   }
+  ],
+  "top_levels": [
+   {
+    "name": "Алексей Б.",
+    "value": 15
+   },
+   {
+    "name": "Νουρασύλ Λ.",
+    "value": 10
+   },
+   {
+    "name": "Фармин М.",
+    "value": 9
+   },
+   {
+    "name": "Игорь Г.",
+    "value": 8
+   },
+   {
+    "name": "Axel S.",
+    "value": 5
+   },
+   {
+    "name": "Диктаторский Ф.",
+    "value": 4
+   },
+   {
+    "name": "Марина К.",
+    "value": 4
+   },
+   {
+    "name": "Блейз К.",
+    "value": 3
+   }
+  ]
+ },
+ "events": {
+  "finished": 4,
+  "avg_minutes": 0,
+  "commands_total": 0,
+  "top_commands": [],
+  "top_hosts": [
+   {
+    "name": "Алексей Б.",
+    "value": 3
+   },
+   {
+    "name": "Марина К.",
+    "value": 1
+   }
+  ],
+  "popular": {
+   "name": "тест",
+   "value": 2
+  }
+ }
+}
