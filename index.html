@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SALATNIK MANAGER — боты проекта</title>
+<meta name="description" content="Все команды и статистика ботов SALATNIK MANAGER и BLACK EVENTS: модерация, экономика, базы, казино и мероприятия.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#09090b; --bg2:#0f0f12; --card:#141418; --card2:#1a1a20; --line:#26262e; --line2:#33333d;
+  --text:#ececf1; --muted:#9a9aa8; --dim:#6b6b78;
+  --acc:#3ddc84; --acc2:#7cf0b0; --accbg:rgba(61,220,132,.12); --glow:rgba(61,220,132,.22);
+  --r0:#4cc38a; --r1:#3e9bff; --r2:#a77bff; --r3:#f5a524; --r4:#ff6369;
+  --radius:14px; --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+body.ev{--acc:#e5484d; --acc2:#ff8a7a; --accbg:rgba(229,72,77,.12); --glow:rgba(229,72,77,.24)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font:15px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+code,.mono{font-family:var(--mono)}
+[hidden]{display:none!important}
+
+header{position:sticky;top:0;z-index:20;background:rgba(9,9,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.05em;white-space:nowrap}
+.logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--acc),#0c3b22);display:grid;place-items:center;font-style:normal;font-size:16px;box-shadow:0 0 22px var(--glow)}
+body.ev .logo i{background:linear-gradient(135deg,var(--acc),#5a0f12)}
+.nav nav{display:flex;gap:4px;margin-left:auto}
+.nav nav a{padding:7px 12px;border-radius:9px;color:var(--muted);font-weight:500;font-size:14px;transition:.15s}
+.nav nav a:hover{color:var(--text);background:var(--card)}
+.back{display:none;align-items:center;gap:6px;color:var(--muted);font-size:14px;padding:7px 12px;border-radius:9px;border:1px solid var(--line)}
+.back:hover{color:var(--text);border-color:var(--line2)}
+body.page .back{display:inline-flex}
+@media(max-width:860px){.nav nav{display:none}.back{margin-left:auto}}
+
+.hero{position:relative;padding:76px 0 52px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto;height:620px;background:radial-gradient(closest-side,var(--glow),transparent 70%);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at 50% 0,#000 20%,transparent 70%);opacity:.35;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line2);border-radius:99px;font-size:13px;color:var(--muted);background:var(--bg2)}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--r0);box-shadow:0 0 10px var(--r0)}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.05;font-weight:800;letter-spacing:-.03em;margin:22px 0 16px}
+h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:660px}
+
+/* выбор бота */
+.pick{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+@media(max-width:760px){.pick{grid-template-columns:1fr}}
+.bot{position:relative;display:flex;flex-direction:column;gap:12px;padding:26px;border-radius:18px;border:1px solid var(--line2);background:var(--card);overflow:hidden;transition:.2s}
+.bot:before{content:"";position:absolute;inset:auto -30% -60% auto;width:340px;height:340px;border-radius:50%;background:radial-gradient(closest-side,var(--c),transparent 70%);opacity:.35;transition:.2s}
+.bot:hover{transform:translateY(-3px);border-color:var(--c)}
+.bot:hover:before{opacity:.6}
+.bot .em{font-size:40px;line-height:1}
+.bot h3{font-size:24px;font-weight:800;letter-spacing:-.01em}
+.bot p{color:var(--muted);position:relative}
+.bot ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;position:relative}
+.bot li{font-size:12.5px;padding:3px 10px;border-radius:99px;border:1px solid var(--line2);color:#c9c9d3}
+.bot .go{margin-top:auto;font-weight:700;color:var(--c);position:relative}
+
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:11px;font-weight:600;font-size:15px;border:1px solid var(--line2);background:var(--card);transition:.15s;cursor:pointer;color:var(--text)}
+.btn:hover{border-color:var(--dim);transform:translateY(-1px)}
+.btn.main{background:var(--acc);border-color:var(--acc);color:#06140c}
+body.ev .btn.main{color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:13px}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--muted);margin-top:6px}
+
+/* живая статистика */
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.board{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.board h4{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;gap:8px;align-items:center}
+.board ol{list-style:none;display:grid;gap:2px}
+.board li{display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:8px;font-size:14px}
+.board li:nth-child(odd){background:var(--bg2)}
+.board .pl{width:24px;text-align:center;font-size:13px;color:var(--dim);font-weight:700;flex-shrink:0}
+.board .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.board .vl{font-family:var(--mono);font-size:13px;color:var(--acc2);font-weight:600}
+.hl{display:flex;flex-direction:column;justify-content:center;gap:4px;background:linear-gradient(135deg,var(--accbg),transparent);border-color:color-mix(in srgb,var(--acc) 35%,var(--line))}
+.hl .big{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.hl .cap{color:var(--muted);font-size:13px}
+.upd{color:var(--dim);font-size:13px}
+.nodata{color:var(--muted);padding:20px;border:1px dashed var(--line2);border-radius:var(--radius);text-align:center}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px;position:sticky;top:62px;z-index:10;background:var(--bg);padding:12px 0}
+.search{flex:1 1 280px;position:relative}
+.search input{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:11px;padding:11px 14px 11px 40px;font:inherit;outline:none;transition:.15s}
+.search input:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--accbg)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--dim)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;padding:7px 12px;border-radius:99px;border:1px solid var(--line);font-size:13px;color:var(--muted);transition:.15s}
+.chip:hover{color:var(--text)}
+.chip.on{background:var(--accbg);border-color:color-mix(in srgb,var(--acc) 50%,transparent);color:var(--acc2)}
+.group{margin-bottom:30px}
+.group h3{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.group h3:after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
+.cmd{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 14px;display:flex;flex-direction:column;gap:9px;transition:.15s}
+.cmd:hover{border-color:var(--line2);background:var(--card2)}
+.top{display:flex;align-items:flex-start;gap:10px}
+.name{font-family:var(--mono);font-weight:600;font-size:15px;word-break:break-word}
+.name em{font-style:normal;color:var(--dim);font-weight:500}
+.copy{all:unset;cursor:pointer;margin-left:auto;color:var(--dim);padding:3px;border-radius:6px;line-height:0;flex-shrink:0}
+.copy:hover{color:var(--text);background:var(--line)}
+.desc{color:#c9c9d3;font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto}
+.role{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:99px;border:1px solid}
+.al{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--bg2);border:1px solid var(--line);padding:2px 8px;border-radius:7px}
+.pm{font-size:11.5px;color:var(--r3);border:1px dashed rgba(245,165,36,.5);padding:2px 8px;border-radius:99px}
+.empty{color:var(--muted);text-align:center;padding:40px;border:1px dashed var(--line2);border-radius:var(--radius)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+.card h4{font-size:17px;font-weight:700;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.card p,.card li{color:#c4c4ce;font-size:14.5px}
+.card ul{padding-left:18px;display:grid;gap:5px}
+.card code,.step code{background:var(--bg2);border:1px solid var(--line);padding:1px 6px;border-radius:6px;font-size:13px;color:var(--text)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.ladder{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;align-items:center}
+.steps{counter-reset:s;display:grid;gap:12px}
+.step{counter-increment:s;display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.step:before{content:counter(s);flex-shrink:0;width:30px;height:30px;border-radius:9px;background:var(--accbg);color:var(--acc2);font-weight:800;display:grid;place-items:center}
+.step b{display:block;margin-bottom:2px}
+.step p{color:#c4c4ce;font-size:14.5px}
+.kd{display:grid;grid-template-columns:repeat(2,max-content);gap:6px;margin:8px 0 4px}
+.kb{font-size:13px;font-weight:600;padding:6px 14px;border-radius:8px;color:#fff;text-align:center}
+.kb.g{background:#2f9e5b}.kb.r{background:#d64545}
+
+footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 22px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--card2);border:1px solid var(--line2);padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:.2s;pointer-events:none;z-index:50}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#"><i id="logo-ic">🥗</i><span id="logo-tx">SALATNIK MANAGER</span></a>
+    <nav id="nav"></nav>
+    <a class="back" href="#">← Все боты</a>
+  </div>
+</header>
+
+<!-- ===================== ГЛАВНАЯ: выбор бота ===================== -->
+<main id="home">
+  <div class="hero">
+    <div class="wrap">
+      <span class="pill"><b></b>Боты работают 24/7</span>
+      <h1>Боты проекта<br><span>SALATNIK MANAGER</span></h1>
+      <p class="lead">Выберите бота, чтобы посмотреть все его команды, правила и живую статистику.</p>
+      <div class="pick">
+        <a class="bot" href="#salatnik" style="--c:#3ddc84">
+          <span class="em">🥗</span>
+          <h3>SALATNIK MANAGER</h3>
+          <p>Главный бот: модерация бесед, экономика и уровни, дропы, базы с войнами, дуэли и казино.</p>
+          <ul><li>Модерация</li><li>Экономика</li><li>Базы</li><li>Казино</li><li id="cnt-sm">команды</li></ul>
+          <span class="go">Открыть →</span>
+        </a>
+        <a class="bot" href="#events" style="--c:#e5484d">
+          <span class="em">🎉</span>
+          <h3>BLACK EVENTS</h3>
+          <p>Очередь мероприятий: кто проводит, КД, напоминания в ЛС, топ проводящих и подробная аналитика.</p>
+          <ul><li>Очередь МП</li><li>КД</li><li>Аналитика</li><li id="cnt-ev">команды</li></ul>
+          <span class="go">Открыть →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ===================== SALATNIK MANAGER ===================== -->
+<main id="p-salatnik" hidden>
+  <div class="hero">
+    <div class="wrap">
+      <span class="pill"><b></b>Главный бот проекта</span>
+      <h1>🥗 <span>SALATNIK MANAGER</span></h1>
+      <p class="lead">Модерация бесед, экономика и уровни, дропы подарков, базы с войнами, дуэли и казино.</p>
+      <div class="cta"><a class="btn main" href="#sm-commands">Все команды →</a><a class="btn" href="#sm-stats">Статистика</a></div>
+      <div class="stats" id="sm-tiles"></div>
+    </div>
+  </div>
+
+  <section id="sm-stats"><div class="wrap">
+    <div class="sh"><div><h2>📊 Статистика</h2><p class="sub upd" id="sm-upd"></p></div></div>
+    <div class="boards" id="sm-boards"></div>
+  </div></section>
+
+  <section id="sm-commands"><div class="wrap">
+    <div class="sh"><div><h2>Команды</h2><p class="sub">Начинаются с <code>/</code>, <code>!</code>, <code>+</code> или <code>.</code> — у многих есть короткие русские варианты.</p></div></div>
+    <div class="tools" data-bot="vk"></div>
+    <div class="list" data-bot="vk"></div>
+  </div></section>
+
+  <section id="sm-start"><div class="wrap">
+    <div class="sh"><div><h2>С чего начать</h2></div></div>
+    <div class="cards">
+      <div class="card"><h4>🎯 Как указать пользователя</h4><ul>
+        <li>Ответьте командой на его сообщение — самый простой способ.</li>
+        <li>Или перешлите его сообщение вместе с командой.</li>
+        <li>Или упомяните: <code>@username</code>, <code>[id123|Имя]</code>, ссылка <code>vk.com/…</code> или ID.</li>
+        <li>Информационные команды (<code>/stats</code>, <code>/getid</code>…) без цели показывают вас.</li></ul></div>
+      <div class="card"><h4>👑 Роли</h4><p>Каждая роль может всё, что доступно ролям ниже.</p>
+        <div class="ladder" id="ladder"></div><p style="margin-top:12px">Наказывать можно только тех, чья роль ниже вашей.</p></div>
+      <div class="card"><h4>🚨 Автомодерация</h4><ul>
+        <li><b>3 предупреждения</b> — исключение из беседы, счётчик обнуляется.</li>
+        <li><b>Фильтр слов:</b> 1-е нарушение — удаление, 2-е — мут на 30 минут, 3-е — кик.</li>
+        <li><b>Флуд:</b> больше 5 сообщений за 3 секунды — кик.</li>
+        <li>Мут — до 30 суток. На модераторов и выше фильтр и антифлуд не действуют.</li></ul></div>
+      <div class="card"><h4>⭐ Нужна звёздочка</h4><p>Чтобы бот работал, ему нужны права администратора беседы. Без «звёздочки» он напомнит об этом и не будет выполнять команды.</p></div>
+    </div>
+  </div></section>
+
+  <section id="sm-economy"><div class="wrap">
+    <div class="sh"><div><h2>💰 Экономика</h2><p class="sub">Только в беседах игроков. Монеты свои в каждой беседе, опыт и уровень — общие.</p></div></div>
+    <div class="cards">
+      <div class="card"><h4>🎁 Бонус и уровни</h4><ul>
+        <li><code>/bonus</code> — раз в 3 часа: 80–120 монет и 80–120 опыта.</li>
+        <li>Уровни с 1 по 15, опыт растёт от бонусов и дропов.</li>
+        <li><code>/pay</code> — перевод монет, комиссия <b>5%</b>.</li>
+        <li><code>/top</code> — топ-10 беседы по монетам.</li></ul></div>
+      <div class="card"><h4>📦 Дропы подарков</h4>
+        <p>Несколько раз в день бот «кидает» дропы с кнопкой <b>«Забрать»</b> — кто успел, тот и забрал. Ивент длится 5 минут, максимум 3 дропа на человека.</p>
+        <table><tr><th>Время (МСК)</th><th>Дроп</th></tr>
+          <tr><td>00:00 · 05:00 · 10:00</td><td>Обычный</td></tr><tr><td>14:00 · 19:00</td><td>🔥 Улучшенный</td></tr></table></div>
+      <div class="card"><h4>💎 Шансы дропов</h4>
+        <table><tr><th>Тип</th><th>Шанс</th></tr><tr><td>📦 Обычный</td><td>50%</td></tr><tr><td>🌟 Золотой</td><td>30%</td></tr>
+          <tr><td>💎 Алмазный</td><td>15%</td></tr><tr><td>🔮 Мифический</td><td>5%</td></tr></table>
+        <p style="margin-top:10px">Внутри — монеты и опыт, а в улучшенных ещё удвоение призов на 10 дней, бесплатная база или улучшение. Подробно — <code>/drop</code>.</p></div>
+      <div class="card"><h4>🏰 Базы и войны</h4><ul>
+        <li>Купить или создать базу — с <b>10 уровня</b> (15 000 монет), вступить — со <b>2 уровня</b>.</li>
+        <li>До 30 участников, уровень базы и защита — до 10.</li>
+        <li>Война длится 2 минуты, нападать можно раз в 30 минут. Проигравший отдаёт победителю 1/5 хранилища.</li>
+        <li>Всё управление — кнопками в <code>/base</code>, инструкция — <code>/bazehelp</code>.</li></ul></div>
+    </div>
+  </div></section>
+
+  <section id="sm-casino"><div class="wrap">
+    <div class="sh"><div><h2>🎰 Дуэли и казино</h2><p class="sub">Ставка списывается сразу, если игра не состоялась — возвращается. Удвоение призов здесь не действует.</p></div></div>
+    <div class="cards">
+      <div class="card"><h4>⚔️ Дуэль</h4><ul>
+        <li><code>/duel 100</code> — вызов для любого желающего.</li>
+        <li><code>/duel @user 100</code> — вызов конкретному игроку.</li>
+        <li>Соперник жмёт <b>«Принять»</b>, победитель выбирается случайно и забирает банк.</li>
+        <li>Комиссия <b>5%</b>. Вызов действует 2 минуты.</li></ul></div>
+      <div class="card"><h4>🎲 Кости</h4><ul>
+        <li><code>/kosti 100</code> — создать стол, остальные входят кнопкой <b>«Войти»</b>.</li>
+        <li>До 5 игроков, ставка у всех одинаковая.</li>
+        <li>Каждый бросает два кубика — у кого больше сумма, тот забирает банк. Ничья — переброс.</li>
+        <li>Комиссия <b>6%</b> с выигрыша. Список игр — <code>/casino</code>.</li></ul></div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ===================== BLACK EVENTS ===================== -->
+<main id="p-events" hidden>
+  <div class="hero">
+    <div class="wrap">
+      <span class="pill"><b></b>Бот мероприятий</span>
+      <h1>🎉 <span>BLACK EVENTS</span></h1>
+      <p class="lead">Очередь мероприятий в беседе: одновременно проводит только один человек, остальные ждут своей очереди и КД.</p>
+      <div class="cta"><a class="btn main" href="#ev-commands">Все команды →</a><a class="btn" href="#ev-how">Как это работает</a></div>
+      <div class="stats" id="ev-tiles"></div>
+    </div>
+  </div>
+
+  <section id="ev-stats"><div class="wrap">
+    <div class="sh"><div><h2>📊 Статистика</h2><p class="sub upd" id="ev-upd"></p></div></div>
+    <div class="boards" id="ev-boards"></div>
+  </div></section>
+
+  <section id="ev-how"><div class="wrap">
+    <div class="sh"><div><h2>Как это работает</h2></div></div>
+    <div class="steps">
+      <div class="step"><div><b>Займите мероприятие</b><p><code>/event "Название"</code> — в беседе появится сообщение с кнопками. Если кто-то уже проводит или идёт КД — вы встаёте в очередь.</p></div></div>
+      <div class="step"><div><b>Дождитесь очереди</b><p>Бот напишет в ЛС, когда подойдёт ваша очередь, и будет напоминать каждые 3 минуты. Разрешите сообщения от сообщества!</p></div></div>
+      <div class="step"><div><b>Проведите и поставьте КД</b><p>На проведение — 30 минут. Под сообщением:</p>
+        <div class="kd"><span class="kb g">КД</span><span class="kb g">Написать КД</span><span class="kb r">Откат</span><span class="kb r">Аннулировать</span></div>
+        <p>«КД» — следующий начнёт через 10 минут, «Написать КД» — своё время (чч:мм), «Откат» — отказаться или выйти из очереди. Не успели за 30 минут — мероприятие аннулируется.</p></div></div>
+      <div class="step"><div><b>После проведения</b><p>Под сообщением остаются <span class="kb g" style="padding:2px 8px">Изменить КД</span> (провёдший и модераторы) и <span class="kb r" style="padding:2px 8px">Аннулировать</span> (модераторы, с причиной). Топ — <code>/top</code>, подробная аналитика для модераторов — <code>/table</code>.</p></div></div>
+    </div>
+  </div></section>
+
+  <section id="ev-commands"><div class="wrap">
+    <div class="sh"><div><h2>Команды</h2><p class="sub">Работают только в беседе. Ответы бота сами удаляются через минуту (кроме /event и /table).</p></div></div>
+    <div class="tools" data-bot="ev"></div>
+    <div class="list" data-bot="ev"></div>
+  </div></section>
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="logo"><i>🥗</i>SALATNIK MANAGER</div>
+    <div class="links">
+      <a class="btn" href="https://discord.gg/QTU7buR78" target="_blank" rel="noopener">💬 Discord</a>
+      <a class="btn" href="https://vk.com/satorimeow" target="_blank" rel="noopener">🛠 Техподдержка</a>
+      <a class="btn" href="https://vk.com/satorimeow" target="_blank" rel="noopener">🤝 Сотрудничество</a>
+    </div>
+    <p>Список команд обновляется вместе с ботами. Полный список для вашей роли — <code class="mono">/help</code> в беседе.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Скопировано</div>
+
+<script>
+const DATA = {vk: [{"n": "info", "a": ["инфо", "информация"], "r": 0, "u": "", "d": "Посмотреть официальные ресурсы проекта.", "g": "Основное", "pm": false}, {"n": "getid", "a": ["id", "айди", "ид"], "r": 0, "u": "@user", "d": "Узнать оригинальный ID пользователя ВКонтакте (без цели — ваш).", "g": "Основное", "pm": false}, {"n": "stats", "a": ["стата", "статс"], "r": 0, "u": "@user", "d": "Посмотреть статистику и информацию о пользователе (без цели — ваша).", "g": "Основное", "pm": false}, {"n": "help", "a": ["помощь", "хелп"], "r": 0, "u": "", "d": "Показать список команд, доступных вашему уровню прав.", "g": "Основное", "pm": false}, {"n": "addmoder", "a": ["mod", "модер", "модератор"], "r": 2, "u": "@user", "d": "Назначить пользователя модератором беседы.", "g": "Роли", "pm": false}, {"n": "addsenmoder", "a": ["senmoder", "smod", "senmod"], "r": 3, "u": "@user", "d": "Назначить пользователя старшим модератором беседы.", "g": "Роли", "pm": false}, {"n": "addadmin", "a": ["admin", "админ"], "r": 4, "u": "@user", "d": "Назначить пользователя администратором беседы.", "g": "Роли", "pm": false}, {"n": "removerole", "a": ["сроль", "rrole", "участник"], "r": 2, "u": "@user", "d": "Снять роль с пользователя и вернуть ему статус «Участник».", "g": "Роли", "pm": false}, {"n": "staff", "a": ["стафф"], "r": 1, "u": "", "d": "Посмотреть список администрации и состава беседы.", "g": "Роли", "pm": false}, {"n": "getnick", "a": ["gnick", "никлист"], "r": 1, "u": "@user", "d": "Проверить текущий ник пользователя (без цели — ваш).", "g": "Ники", "pm": false}, {"n": "setnick", "a": ["snick"], "r": 1, "u": "@user [ник]", "d": "Установить или изменить ник пользователю.", "g": "Ники", "pm": false}, {"n": "removenick", "a": ["rnick"], "r": 1, "u": "@user", "d": "Удалить ник у пользователя.", "g": "Ники", "pm": false}, {"n": "getacc", "a": ["аккаунт"], "r": 1, "u": "[ник]", "d": "Узнать пользователя по его нику.", "g": "Ники", "pm": false}, {"n": "kick", "a": ["кик"], "r": 1, "u": "@user [причина]", "d": "Исключить пользователя из беседы.", "g": "Наказания", "pm": false}, {"n": "mute", "a": ["мут", "заткнуть"], "r": 1, "u": "@user [время в мин] [причина]", "d": "Запретить пользователю писать в чат на указанное время.", "g": "Наказания", "pm": false}, {"n": "unmute", "a": ["размут", "разоткнуть"], "r": 1, "u": "@user [причина]", "d": "Снять мут с пользователя.", "g": "Наказания", "pm": false}, {"n": "warn", "a": ["пред", "варн"], "r": 1, "u": "@user [причина]", "d": "Выдать предупреждение пользователю.", "g": "Наказания", "pm": false}, {"n": "unwarn", "a": ["снятьпред", "разварн"], "r": 1, "u": "@user [причина]", "d": "Снять одно предупреждение с пользователя.", "g": "Наказания", "pm": false}, {"n": "getwarn", "a": ["варны"], "r": 1, "u": "@user", "d": "Посмотреть активные предупреждения пользователя (без цели — ваши).", "g": "Наказания", "pm": false}, {"n": "warnhistory", "a": ["историяварнов"], "r": 1, "u": "@user", "d": "Посмотреть полную историю предупреждений пользователя (без цели — вашу).", "g": "Наказания", "pm": false}, {"n": "clear", "a": ["чистка"], "r": 1, "u": "", "d": "Очистить сообщения: ответом на сообщение или пересылкой сообщений из этой беседы.", "g": "Наказания", "pm": false}, {"n": "ban", "a": ["бан"], "r": 2, "u": "@user [причина]", "d": "Заблокировать пользователя в текущей беседе (навсегда).", "g": "Блокировки", "pm": false}, {"n": "unban", "a": ["разбан"], "r": 2, "u": "@user [причина]", "d": "Разблокировать пользователя в текущей беседе.", "g": "Блокировки", "pm": false}, {"n": "getban", "a": ["чекбан", "гетбан"], "r": 1, "u": "@user", "d": "Проверить информацию о активных блокировках пользователя (без цели — ваши).", "g": "Блокировки", "pm": false}, {"n": "sban", "a": [], "r": 3, "u": "@user [причина]", "d": "Заблокировать пользователя во всех беседах текущего сервера.", "g": "Блокировки", "pm": false}, {"n": "sunban", "a": [], "r": 3, "u": "@user [причина]", "d": "Снять серверную блокировку с пользователя.", "g": "Блокировки", "pm": false}, {"n": "skick", "a": [], "r": 3, "u": "@user [причина]", "d": "Исключить пользователя из всех бесед текущего сервера.", "g": "Блокировки", "pm": false}, {"n": "gban", "a": [], "r": 4, "u": "@user [причина]", "d": "Заблокировать пользователя во всех беседах с типом «Администраторы».", "g": "Блокировки", "pm": false}, {"n": "gunban", "a": [], "r": 4, "u": "@user [причина]", "d": "Снять глобальный бан административных бесед.", "g": "Блокировки", "pm": false}, {"n": "gbanpl", "a": [], "r": 4, "u": "@user [причина]", "d": "Заблокировать пользователя во всех беседах проекта (включает /gban и беседы игроков).", "g": "Блокировки", "pm": false}, {"n": "gunbanpl", "a": [], "r": 4, "u": "@user [причина]", "d": "Снять блокировку во всех беседах проекта (и /gban, и беседы игроков).", "g": "Блокировки", "pm": false}, {"n": "nlist", "a": ["ники"], "r": 1, "u": "", "d": "Посмотреть список пользователей с никами.", "g": "Списки", "pm": false}, {"n": "nonick", "a": ["безников"], "r": 1, "u": "", "d": "Посмотреть список пользователей без ников.", "g": "Списки", "pm": false}, {"n": "banlist", "a": ["банлист", "списокбана"], "r": 2, "u": "", "d": "Посмотреть список заблокированных пользователей в беседе.", "g": "Списки", "pm": false}, {"n": "sbanlist", "a": [], "r": 3, "u": "", "d": "Посмотреть список заблокированных пользователей на сервере.", "g": "Списки", "pm": false}, {"n": "gbanlist", "a": [], "r": 4, "u": "[pl]", "d": "Посмотреть список пользователей в глобальном бане (pl — бесед игроков).", "g": "Списки", "pm": false}, {"n": "warnlist", "a": ["варнлист"], "r": 1, "u": "", "d": "Посмотреть список всех пользователей в беседе, имеющих предупреждения.", "g": "Списки", "pm": false}, {"n": "type", "a": [], "r": 4, "u": "[adm]", "d": "Выбрать тип беседы (по умолчанию — Беседа игроков, adm — Администраторы).", "g": "Настройки беседы", "pm": false}, {"n": "settings", "a": [], "r": 4, "u": "", "d": "Посмотреть текущие настройки беседы (тип, владелец, привязанный сервер).", "g": "Настройки беседы", "pm": false}, {"n": "addword", "a": [], "r": 4, "u": "[слово]", "d": "Добавить слово в фильтр запрещенных слов (слово* — по началу слова).", "g": "Фильтр слов", "pm": false}, {"n": "delword", "a": [], "r": 4, "u": "[слово]", "d": "Удалить слово из фильтра запрещенных слов.", "g": "Фильтр слов", "pm": false}, {"n": "banwords", "a": [], "r": 4, "u": "", "d": "Посмотреть список всех запрещенных слов.", "g": "Фильтр слов", "pm": false}, {"n": "filter", "a": [], "r": 4, "u": "", "d": "Включить или выключить автоматический фильтр запрещенных слов в беседе.", "g": "Фильтр слов", "pm": false}, {"n": "zov", "a": ["зов"], "r": 2, "u": "[причина]", "d": "Упомянуть вообще всех участников беседы.", "g": "Созыв и тишина", "pm": false}, {"n": "online", "a": ["онлайн"], "r": 2, "u": "[причина]", "d": "Упомянуть всех пользователей, находящихся сейчас в сети.", "g": "Созыв и тишина", "pm": false}, {"n": "onlinelist", "a": ["olist"], "r": 2, "u": "", "d": "Посмотреть список пользователей онлайн с разбивкой по устройствам (ПК/Мобильный).", "g": "Созыв и тишина", "pm": false}, {"n": "quiet", "a": ["timeout", "тишина"], "r": 3, "u": "", "d": "Включить или выключить «режим тишины» в беседе.", "g": "Созыв и тишина", "pm": false}, {"n": "bonus", "a": ["reward", "бонус", "ревард"], "r": 0, "u": "", "d": "Получить бонус раз в 3 часа (монеты и опыт).", "g": "Экономика", "pm": false}, {"n": "balance", "a": ["баланс", "бал", "money"], "r": 0, "u": "", "d": "Посмотреть свой баланс.", "g": "Экономика", "pm": false}, {"n": "pay", "a": ["перевод", "передать", "перевести"], "r": 0, "u": "@user [сумма]", "d": "Перевести монеты (ответом на сообщение или упоминанием), комиссия 5%.", "g": "Экономика", "pm": false}, {"n": "top", "a": ["топ"], "r": 0, "u": "", "d": "Топ-10 участников беседы по монетам.", "g": "Экономика", "pm": false}, {"n": "drop", "a": ["дроп", "дропы"], "r": 0, "u": "", "d": "Узнать, что такое дропы подарков, их график и призы.", "g": "Экономика", "pm": false}, {"n": "shop", "a": ["магазин"], "r": 0, "u": "", "d": "Магазин.", "g": "Экономика", "pm": false}, {"n": "base", "a": ["база"], "r": 0, "u": "", "d": "Ваша база: хранилище, участники, улучшения и войны.", "g": "Базы и войны", "pm": false}, {"n": "bazehelp", "a": ["базахелп", "basehelp"], "r": 0, "u": "", "d": "Инструкция по базам и войнам (придёт в ЛС).", "g": "Базы и войны", "pm": false}, {"n": "duel", "a": ["дуэль", "дуель"], "r": 0, "u": "[@user] [ставка]", "d": "Дуэль на монеты: победитель забирает всё (комиссия 5%).", "g": "Дуэли и казино", "pm": false}, {"n": "casino", "a": ["казино", "казик"], "r": 0, "u": "", "d": "Казино: список игр.", "g": "Дуэли и казино", "pm": false}, {"n": "kosti", "a": ["кости"], "r": 0, "u": "[ставка]", "d": "Кости: до 5 игроков, победитель забирает банк (комиссия 6%).", "g": "Дуэли и казино", "pm": false}, {"n": "host", "a": [], "r": 0, "u": "", "d": "Загрузить фото на ImgBB и получить ссылки (в ЛС с ботом).", "g": "Полезное", "pm": true}], ev: [{"n": "event", "a": ["мп", "mp", "ивент"], "r": 0, "u": "\"название\"", "d": "Занять мероприятие.", "g": "Мероприятия"}, {"n": "restart", "a": ["рестарт"], "r": 2, "u": "", "d": "Аннулировать все мероприятия и очереди (и КД) и начать заново.", "g": "Мероприятия"}, {"n": "timeout", "a": ["тишина", "quiet"], "r": 2, "u": "", "d": "Режим тишины: бот удаляет сообщения участников (повторно — выключить).", "g": "Мероприятия"}, {"n": "addmoder", "a": ["модер", "mod"], "r": 2, "u": "@user", "d": "Назначить модератора.", "g": "Роли"}, {"n": "addadmin", "a": ["админ", "admin"], "r": 2, "u": "@user", "d": "Назначить администратора.", "g": "Роли"}, {"n": "rrole", "a": ["removerole", "сроль"], "r": 2, "u": "@user", "d": "Снять роль.", "g": "Роли"}, {"n": "staff", "a": ["стафф"], "r": 1, "u": "", "d": "Администраторы и модераторы.", "g": "Роли"}, {"n": "snick", "a": ["setnick", "ник"], "r": 1, "u": "@user Nick_Name", "d": "Поставить ник.", "g": "Ники"}, {"n": "rnick", "a": ["removenick"], "r": 1, "u": "@user", "d": "Убрать ник.", "g": "Ники"}, {"n": "nlist", "a": ["ники"], "r": 1, "u": "", "d": "Список ников.", "g": "Ники"}, {"n": "help", "a": ["помощь", "команды"], "r": 0, "u": "", "d": "Список доступных вам команд.", "g": "Основное"}, {"n": "top", "a": ["топ"], "r": 0, "u": "", "d": "Топ-10 по проведённым мероприятиям.", "g": "Мероприятия"}, {"n": "table", "a": ["аналитика", "таблица"], "r": 1, "u": "", "d": "Аналитика мероприятий.", "g": "Мероприятия"}]};
+const ROLES = {
+  vk: [["Все", "--r0"], ["Модератор", "--r1"], ["Ст. модератор", "--r2"], ["Администратор", "--r3"], ["Ст. администратор", "--r4"]],
+  ev: [["Все", "--r0"], ["Модератор", "--r1"], ["Администратор", "--r3"]],
+};
+const NAV = {
+  salatnik: [["#sm-stats", "Статистика"], ["#sm-commands", "Команды"], ["#sm-start", "С чего начать"], ["#sm-economy", "Экономика"], ["#sm-casino", "Казино"]],
+  events: [["#ev-stats", "Статистика"], ["#ev-how", "Как работает"], ["#ev-commands", "Команды"]],
+};
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const fmt = n => Number(n || 0).toLocaleString("ru-RU");
+const state = {vk: {role: null, q: ""}, ev: {role: null, q: ""}};
+
+// ---------- маршрутизация: #salatnik / #events / подразделы ----------
+function route() {
+  const h = location.hash.slice(1);
+  const page = h === "salatnik" || h.startsWith("sm-") ? "salatnik" : h === "events" || h.startsWith("ev-") ? "events" : "home";
+  $("#home").hidden = page !== "home";
+  $("#p-salatnik").hidden = page !== "salatnik";
+  $("#p-events").hidden = page !== "events";
+  document.body.classList.toggle("page", page !== "home");
+  document.body.classList.toggle("ev", page === "events");
+  $("#logo-ic").textContent = page === "events" ? "🎉" : "🥗";
+  $("#logo-tx").textContent = page === "events" ? "BLACK EVENTS" : "SALATNIK MANAGER";
+  $("#nav").innerHTML = (NAV[page] || []).map(([href, t]) => `<a href="${href}">${t}</a>`).join("");
+  document.title = page === "events" ? "BLACK EVENTS — команды и статистика" : page === "salatnik" ? "SALATNIK MANAGER — команды и статистика" : "SALATNIK MANAGER — боты проекта";
+  if (h === "salatnik" || h === "events" || !h) window.scrollTo(0, 0);
+  else requestAnimationFrame(() => document.getElementById(h)?.scrollIntoView());
+}
+addEventListener("hashchange", route);
+
+// ---------- команды ----------
+function roleBadge(bot, r) {
+  const [t, c] = ROLES[bot][r] || ["—", "--dim"];
+  const label = r ? t + (r < ROLES[bot].length - 1 ? "+" : "") : "Все";
+  return `<span class="role" style="color:var(${c});border-color:color-mix(in srgb,var(${c}) 45%,transparent);background:color-mix(in srgb,var(${c}) 10%,transparent)">${label}</span>`;
+}
+
+function renderTools(bot) {
+  const st = state[bot];
+  const chips = [["Все роли", null], ...ROLES[bot].map(([t], i) => [i ? t : "Участник", i])];
+  $(`.tools[data-bot=${bot}]`).innerHTML = `
+    <label class="search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" placeholder="${bot === "vk" ? "Поиск: мут, баланс, кости…" : "Поиск: event, ник, аналитика…"}" value="${esc(st.q)}" autocomplete="off"></label>
+    <div class="chips">${chips.map(([t, v]) => `<button class="chip${v === st.role ? " on" : ""}" data-r="${v}">${t}</button>`).join("")}</div>`;
+}
+
+function renderList(bot) {
+  const st = state[bot], q = st.q.trim().toLowerCase().replace(/^[\/!.+]/, "");
+  const items = DATA[bot].filter(c => (st.role === null || c.r <= st.role) &&
+    (!q || [c.n, ...c.a, c.d, c.u].join(" ").toLowerCase().includes(q)));
+  const box = $(`.list[data-bot=${bot}]`);
+  if (!items.length) { box.innerHTML = `<div class="empty">Ничего не нашлось по запросу «${esc(q)}»</div>`; return; }
+  const groups = {};
+  items.forEach(c => (groups[c.g] = groups[c.g] || []).push(c));
+  box.innerHTML = Object.entries(groups).map(([g, cs]) => `
+    <div class="group"><h3>${esc(g)} · ${cs.length}</h3><div class="grid">${cs.map(c => `
+      <div class="cmd">
+        <div class="top"><div class="name">/${esc(c.n)}${c.u ? ` <em>${esc(c.u)}</em>` : ""}</div>
+          <button class="copy" title="Скопировать" data-c="/${esc(c.n)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div>
+        <div class="desc">${esc(c.d)}</div>
+        <div class="meta">${roleBadge(bot, c.r)}${c.pm ? '<span class="pm">в ЛС с ботом</span>' : ""}${c.a.map(a => `<span class="al">/${esc(a)}</span>`).join("")}</div>
+      </div>`).join("")}</div></div>`).join("");
+}
+
+for (const bot of ["vk", "ev"]) {
+  renderTools(bot); renderList(bot);
+  const tools = $(`.tools[data-bot=${bot}]`);
+  tools.addEventListener("input", e => { if (e.target.matches("input")) { state[bot].q = e.target.value; renderList(bot); } });
+  tools.addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    state[bot].role = b.dataset.r === "null" ? null : +b.dataset.r;
+    tools.querySelectorAll(".chip").forEach(x => x.classList.toggle("on", x === b));
+    renderList(bot);
+  });
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".copy"); if (!b) return;
+  navigator.clipboard?.writeText(b.dataset.c).then(() => {
+    const t = $("#toast"); t.textContent = "Скопировано: " + b.dataset.c; t.classList.add("on");
+    clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("on"), 1400);
+  }).catch(() => {});
+});
+$("#ladder").innerHTML = ROLES.vk.map(([t, c], i) =>
+  `<span class="role" style="color:var(${c});border-color:var(${c})">${i ? t : "Участник"}</span>`).join('<span style="color:var(--dim)">›</span>');
+$("#cnt-sm").textContent = DATA.vk.length + " команд";
+$("#cnt-ev").textContent = DATA.ev.length + " команд";
+
+// ---------- живая статистика (stats.json обновляется ботом) ----------
+const MEDAL = ["🥇", "🥈", "🥉"];
+function tiles(id, list) {
+  $(id).innerHTML = list.map(([v, t]) => `<div class="stat"><b>${v}</b><span>${t}</span></div>`).join("");
+}
+function board(title, rows, unit) {
+  if (!rows || !rows.length) return `<div class="board"><h4>${title}</h4><p class="upd">Пока нет данных</p></div>`;
+  return `<div class="board"><h4>${title}</h4><ol>${rows.map((r, i) =>
+    `<li><span class="pl">${MEDAL[i] || i + 1}</span><span class="nm">${esc(r.name)}</span><span class="vl">${fmt(r.value)}${unit ? " " + unit : ""}</span></li>`).join("")}</ol></div>`;
+}
+function highlight(big, cap) {
+  return `<div class="board hl"><span class="cap">${cap}</span><span class="big">${big}</span></div>`;
+}
+
+function renderStats(s) {
+  const sm = s?.salatnik, ev = s?.events;
+  tiles("#sm-tiles", [[DATA.vk.length, "команд"], [sm ? fmt(sm.chats) : "—", "бесед"], [sm ? fmt(sm.users) : "—", "участников"], [sm ? fmt(sm.commands_total) : "—", "вызовов команд"]]);
+  tiles("#ev-tiles", [[DATA.ev.length, "команд"], [ev ? fmt(ev.finished) : "—", "мероприятий проведено"], [ev ? (ev.avg_minutes || 0) + " мин" : "—", "среднее проведение"], [ev ? fmt(ev.commands_total) : "—", "вызовов команд"]]);
+  const none = '<div class="nodata">Статистика появится совсем скоро — бот обновляет её каждые 30 минут.</div>';
+  if (!sm) { $("#sm-boards").innerHTML = none; $("#ev-boards").innerHTML = none; return; }
+  $("#sm-upd").textContent = $("#ev-upd").textContent = "Обновлено: " + s.updated_at + " · обновляется каждые 30 минут";
+  const topCmd = sm.top_commands[0], topUser = sm.top_active[0];
+  $("#sm-boards").innerHTML = [
+    topCmd ? highlight(`/${esc(topCmd.name)}`, `Самая популярная команда — вызвана ${fmt(topCmd.value)} раз`) : "",
+    topUser ? highlight(esc(topUser.name), `Самый активный участник — ${fmt(topUser.value)} сообщений`) : "",
+    board("💰 Топ-10 по монетам", sm.top_coins, "🪙"),
+    board("⭐ Топ-10 по уровню", sm.top_levels, "ур."),
+    board("💬 Топ-10 по активности", sm.top_active, "сообщ."),
+    board("⌨️ Популярные команды", sm.top_commands.map(c => ({...c, name: "/" + c.name})), "раз"),
+  ].join("");
+  $("#ev-boards").innerHTML = [
+    ev.popular ? highlight(esc(ev.popular.name), `Самое частое мероприятие — проведено ${fmt(ev.popular.value)} раз`) : "",
+    ev.top_hosts[0] ? highlight(esc(ev.top_hosts[0].name), `Лучший проводящий — ${fmt(ev.top_hosts[0].value)} мероприятий`) : "",
+    board("🏆 Топ-10 по мероприятиям", ev.top_hosts, "МП"),
+    board("⌨️ Популярные команды", ev.top_commands.map(c => ({...c, name: "/" + c.name})), "раз"),
+  ].join("");
+}
+renderStats(null);
+fetch("stats.json", {cache: "no-store"}).then(r => r.ok ? r.json() : null).then(renderStats).catch(() => {});
+route();
+</script>
+</body>
+</html>
