@@ -1,36 +1,56 @@
 {
- "updated_at": "12.11.2026 21:32 МСК",
+ "updated_at": "12.11.2026 22:02 МСК",
  "salatnik": {
-  "chats": 16,
+  "chats": 14,
   "users": 13,
-  "messages": 3281,
-  "commands_total": 8,
+  "messages": 3303,
+  "commands_total": 16,
   "top_commands": [
    {
     "name": "info",
-    "value": 3
+    "value": 4
+   },
+   {
+    "name": "getban",
+    "value": 4
    },
    {
     "name": "staff",
     "value": 2
    },
    {
-    "name": "getban",
-    "value": 2
+    "name": "zov",
+    "value": 1
    },
    {
-    "name": "zov",
+    "name": "stats",
+    "value": 1
+   },
+   {
+    "name": "allsend",
+    "value": 1
+   },
+   {
+    "name": "help",
+    "value": 1
+   },
+   {
+    "name": "synclist",
+    "value": 1
+   },
+   {
+    "name": "gban",
     "value": 1
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1279
+    "value": 1284
    },
    {
     "name": "Фармин М.",
-    "value": 677
+    "value": 685
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -42,7 +62,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 187
+    "value": 196
    },
    {
     "name": "Игорь Г.",
@@ -141,14 +161,18 @@
  "events": {
   "finished": 4,
   "avg_minutes": 0,
-  "commands_total": 13,
+  "commands_total": 16,
   "top_commands": [
    {
     "name": "event",
-    "value": 12
+    "value": 13
    },
    {
     "name": "top",
+    "value": 2
+   },
+   {
+    "name": "table",
     "value": 1
    }
   ],
