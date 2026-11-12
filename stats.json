@@ -1,10 +1,10 @@
 {
- "updated_at": "12.11.2026 22:02 МСК",
+ "updated_at": "12.11.2026 22:32 МСК",
  "salatnik": {
   "chats": 14,
   "users": 13,
-  "messages": 3303,
-  "commands_total": 16,
+  "messages": 3390,
+  "commands_total": 27,
   "top_commands": [
    {
     "name": "info",
@@ -16,6 +16,14 @@
    },
    {
     "name": "staff",
+    "value": 3
+   },
+   {
+    "name": "unwarn",
+    "value": 3
+   },
+   {
+    "name": "getnick",
     "value": 2
    },
    {
@@ -37,20 +45,16 @@
    {
     "name": "synclist",
     "value": 1
-   },
-   {
-    "name": "gban",
-    "value": 1
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1284
+    "value": 1296
    },
    {
     "name": "Фармин М.",
-    "value": 685
+    "value": 731
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -62,7 +66,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 196
+    "value": 225
    },
    {
     "name": "Игорь Г.",
@@ -161,11 +165,15 @@
  "events": {
   "finished": 4,
   "avg_minutes": 0,
-  "commands_total": 16,
+  "commands_total": 22,
   "top_commands": [
    {
     "name": "event",
     "value": 13
+   },
+   {
+    "name": "snick",
+    "value": 3
    },
    {
     "name": "top",
@@ -173,6 +181,18 @@
    },
    {
     "name": "table",
+    "value": 1
+   },
+   {
+    "name": "nlist",
+    "value": 1
+   },
+   {
+    "name": "rnick",
+    "value": 1
+   },
+   {
+    "name": "staff",
     "value": 1
    }
   ],
