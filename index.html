@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SALATNIK MANAGER — боты проекта</title>
-<meta name="description" content="Все команды и статистика ботов SALATNIK MANAGER и BLACK EVENTS: модерация, экономика, кланы, казино и мероприятия.">
+<title>SATORI — боты проекта</title>
+<meta name="description" content="Боты проекта SATORI — SALATNIK MANAGER и BLACK EVENTS: все команды и статистика, модерация, экономика, кланы, казино и мероприятия.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -152,7 +152,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);f
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#"><i id="logo-ic">🥗</i><span id="logo-tx">SALATNIK MANAGER</span></a>
+    <a class="logo" href="#"><i id="logo-ic">S</i><span id="logo-tx">SATORI</span></a>
     <nav id="nav"></nav>
     <a class="back" href="#">← Все боты</a>
   </div>
@@ -163,7 +163,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);f
   <div class="hero">
     <div class="wrap">
       <span class="pill"><b></b>Боты работают 24/7</span>
-      <h1>Боты проекта<br><span>SALATNIK MANAGER</span></h1>
+      <h1>Боты проекта<br><span>SATORI</span></h1>
       <p class="lead">Выберите бота, чтобы посмотреть все его команды, правила и живую статистику.</p>
       <div class="pick">
         <a class="bot" href="#salatnik" style="--c:#3ddc84">
@@ -310,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);f
 
 <footer id="contacts">
   <div class="wrap">
-    <div class="logo"><i>🥗</i>SALATNIK MANAGER</div>
+    <div class="logo"><i>S</i>SATORI</div>
     <div class="links">
       <a class="btn" href="https://discord.gg/hHmJHxfqHN" target="_blank" rel="noopener">💬 Discord</a>
       <a class="btn" href="https://vk.com/satorimeow" target="_blank" rel="noopener">🛠 Техподдержка</a>
@@ -346,10 +346,10 @@ function route() {
   $("#p-events").hidden = page !== "events";
   document.body.classList.toggle("page", page !== "home");
   document.body.classList.toggle("ev", page === "events");
-  $("#logo-ic").textContent = page === "events" ? "🎉" : "🥗";
-  $("#logo-tx").textContent = page === "events" ? "BLACK EVENTS" : "SALATNIK MANAGER";
+  $("#logo-ic").textContent = page === "events" ? "🎉" : page === "salatnik" ? "🥗" : "S";
+  $("#logo-tx").textContent = page === "events" ? "BLACK EVENTS" : page === "salatnik" ? "SALATNIK MANAGER" : "SATORI";
   $("#nav").innerHTML = (NAV[page] || []).map(([href, t]) => `<a href="${href}">${t}</a>`).join("");
-  document.title = page === "events" ? "BLACK EVENTS — команды и статистика" : page === "salatnik" ? "SALATNIK MANAGER — команды и статистика" : "SALATNIK MANAGER — боты проекта";
+  document.title = page === "events" ? "BLACK EVENTS — команды и статистика" : page === "salatnik" ? "SALATNIK MANAGER — команды и статистика" : "SATORI — боты проекта";
   if (h === "salatnik" || h === "events" || !h) window.scrollTo(0, 0);
   else requestAnimationFrame(() => document.getElementById(h)?.scrollIntoView());
 }
