@@ -1,9 +1,9 @@
 {
- "updated_at": "13.11.2026 09:32 МСК",
+ "updated_at": "13.11.2026 10:02 МСК",
  "salatnik": {
   "chats": 14,
   "users": 13,
-  "messages": 3398,
+  "messages": 3399,
   "commands_total": 27,
   "top_commands": [
    {
@@ -86,7 +86,7 @@
    },
    {
     "name": "Бекжан С.",
-    "value": 48
+    "value": 49
    }
   ],
   "top_coins": [
@@ -96,7 +96,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 110755
+    "value": 111357
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -159,6 +159,10 @@
    {
     "name": "Блейз К.",
     "value": 3
+   },
+   {
+    "name": "Бекжан С.",
+    "value": 2
    }
   ]
  },
