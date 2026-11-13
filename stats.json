@@ -1,10 +1,10 @@
 {
- "updated_at": "13.11.2026 22:04 МСК",
+ "updated_at": "13.11.2026 23:04 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
   "messages": 3620,
-  "commands_total": 80,
+  "commands_total": 81,
   "top_commands": [
    {
     "name": "info",
@@ -19,11 +19,11 @@
     "value": 5
    },
    {
-    "name": "getban",
-    "value": 4
+    "name": "nlist",
+    "value": 5
    },
    {
-    "name": "nlist",
+    "name": "getban",
     "value": 4
    },
    {
