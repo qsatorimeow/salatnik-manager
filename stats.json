@@ -1,5 +1,5 @@
 {
- "updated_at": "13.11.2026 00:32 МСК",
+ "updated_at": "13.11.2026 08:02 МСК",
  "salatnik": {
   "chats": 14,
   "users": 13,
@@ -165,11 +165,11 @@
  "events": {
   "finished": 4,
   "avg_minutes": 0,
-  "commands_total": 22,
+  "commands_total": 24,
   "top_commands": [
    {
     "name": "event",
-    "value": 13
+    "value": 15
    },
    {
     "name": "snick",
