@@ -1,9 +1,9 @@
 {
- "updated_at": "13.11.2026 11:03 МСК",
+ "updated_at": "13.11.2026 11:33 МСК",
  "salatnik": {
   "chats": 14,
   "users": 13,
-  "messages": 3411,
+  "messages": 3415,
   "commands_total": 36,
   "top_commands": [
    {
@@ -54,7 +54,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 736
+    "value": 740
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -167,17 +167,17 @@
   ]
  },
  "events": {
-  "finished": 4,
+  "finished": 5,
   "avg_minutes": 0,
-  "commands_total": 24,
+  "commands_total": 34,
   "top_commands": [
    {
     "name": "event",
-    "value": 15
+    "value": 19
    },
    {
     "name": "snick",
-    "value": 3
+    "value": 5
    },
    {
     "name": "top",
@@ -185,11 +185,11 @@
    },
    {
     "name": "table",
-    "value": 1
+    "value": 2
    },
    {
     "name": "nlist",
-    "value": 1
+    "value": 2
    },
    {
     "name": "rnick",
@@ -198,12 +198,20 @@
    {
     "name": "staff",
     "value": 1
+   },
+   {
+    "name": "timeout",
+    "value": 1
+   },
+   {
+    "name": "help",
+    "value": 1
    }
   ],
   "top_hosts": [
    {
     "name": "Алексей Б.",
-    "value": 3
+    "value": 4
    },
    {
     "name": "Марина К.",
