@@ -1,10 +1,10 @@
 {
- "updated_at": "13.11.2026 17:13 МСК",
+ "updated_at": "13.11.2026 17:43 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3538,
-  "commands_total": 74,
+  "messages": 3567,
+  "commands_total": 75,
   "top_commands": [
    {
     "name": "info",
@@ -35,15 +35,15 @@
     "value": 3
    },
    {
+    "name": "nlist",
+    "value": 3
+   },
+   {
     "name": "top",
     "value": 3
    },
    {
     "name": "remind",
-    "value": 3
-   },
-   {
-    "name": "a",
     "value": 3
    }
   ],
@@ -54,7 +54,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 784
+    "value": 785
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -62,11 +62,11 @@
    },
    {
     "name": "Axel S.",
-    "value": 264
+    "value": 267
    },
    {
     "name": "Марина К.",
-    "value": 230
+    "value": 236
    },
    {
     "name": "Леха В.",
@@ -81,12 +81,12 @@
     "value": 113
    },
    {
-    "name": "Диктаторский Ф.",
-    "value": 71
+    "name": "Бекжан С.",
+    "value": 77
    },
    {
-    "name": "Бекжан С.",
-    "value": 58
+    "name": "Диктаторский Ф.",
+    "value": 71
    }
   ],
   "top_coins": [
@@ -177,27 +177,27 @@
  "events": {
   "finished": 5,
   "avg_minutes": 0,
-  "commands_total": 36,
+  "commands_total": 40,
   "top_commands": [
    {
     "name": "event",
-    "value": 20
+    "value": 22
    },
    {
     "name": "snick",
     "value": 5
    },
    {
+    "name": "top",
+    "value": 3
+   },
+   {
     "name": "table",
     "value": 3
    },
    {
-    "name": "top",
-    "value": 2
-   },
-   {
     "name": "nlist",
-    "value": 2
+    "value": 3
    },
    {
     "name": "rnick",
