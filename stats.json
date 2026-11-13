@@ -1,10 +1,10 @@
 {
- "updated_at": "13.11.2026 16:06 МСК",
+ "updated_at": "13.11.2026 16:13 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3520,
-  "commands_total": 54,
+  "messages": 3531,
+  "commands_total": 67,
   "top_commands": [
    {
     "name": "info",
@@ -20,7 +20,11 @@
    },
    {
     "name": "stats",
-    "value": 3
+    "value": 4
+   },
+   {
+    "name": "bonus",
+    "value": 4
    },
    {
     "name": "unwarn",
@@ -31,26 +35,22 @@
     "value": 3
    },
    {
-    "name": "help",
-    "value": 2
+    "name": "remind",
+    "value": 3
    },
    {
-    "name": "getnick",
-    "value": 2
+    "name": "mute",
+    "value": 3
    },
    {
-    "name": "nlist",
-    "value": 2
-   },
-   {
-    "name": "type",
+    "name": "allsend",
     "value": 2
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1310
+    "value": 1312
    },
    {
     "name": "Фармин М.",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Леха В.",
-    "value": 149
+    "value": 158
    },
    {
     "name": "Игорь Г.",
@@ -125,6 +125,10 @@
    {
     "name": "Фея А.",
     "value": 211
+   },
+   {
+    "name": "Леха В.",
+    "value": 99
    }
   ],
   "top_levels": [
@@ -162,7 +166,7 @@
    },
    {
     "name": "Леха В.",
-    "value": 2
+    "value": 3
    },
    {
     "name": "Бекжан С.",
@@ -173,7 +177,7 @@
  "events": {
   "finished": 5,
   "avg_minutes": 0,
-  "commands_total": 34,
+  "commands_total": 35,
   "top_commands": [
    {
     "name": "event",
@@ -184,11 +188,11 @@
     "value": 5
    },
    {
-    "name": "top",
-    "value": 2
+    "name": "table",
+    "value": 3
    },
    {
-    "name": "table",
+    "name": "top",
     "value": 2
    },
    {
