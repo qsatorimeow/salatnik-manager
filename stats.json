@@ -1,10 +1,10 @@
 {
- "updated_at": "13.11.2026 19:43 МСК",
+ "updated_at": "13.11.2026 22:04 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3619,
-  "commands_total": 75,
+  "messages": 3620,
+  "commands_total": 80,
   "top_commands": [
    {
     "name": "info",
@@ -12,14 +12,18 @@
    },
    {
     "name": "staff",
-    "value": 4
+    "value": 5
+   },
+   {
+    "name": "stats",
+    "value": 5
    },
    {
     "name": "getban",
     "value": 4
    },
    {
-    "name": "stats",
+    "name": "nlist",
     "value": 4
    },
    {
@@ -35,10 +39,6 @@
     "value": 3
    },
    {
-    "name": "nlist",
-    "value": 3
-   },
-   {
     "name": "top",
     "value": 3
    },
@@ -50,7 +50,7 @@
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1314
+    "value": 1315
    },
    {
     "name": "Фармин М.",
