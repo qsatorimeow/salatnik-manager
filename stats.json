@@ -1,10 +1,10 @@
 {
- "updated_at": "13.11.2026 14:03 МСК",
+ "updated_at": "13.11.2026 14:33 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3503,
-  "commands_total": 45,
+  "messages": 3506,
+  "commands_total": 50,
   "top_commands": [
    {
     "name": "info",
@@ -27,6 +27,10 @@
     "value": 3
    },
    {
+    "name": "stats",
+    "value": 2
+   },
+   {
     "name": "help",
     "value": 2
    },
@@ -35,22 +39,18 @@
     "value": 2
    },
    {
+    "name": "nlist",
+    "value": 2
+   },
+   {
     "name": "type",
     "value": 2
-   },
-   {
-    "name": "delserver",
-    "value": 2
-   },
-   {
-    "name": "zov",
-    "value": 1
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1303
+    "value": 1306
    },
    {
     "name": "Фармин М.",
@@ -112,11 +112,11 @@
    },
    {
     "name": "Алексей Б.",
-    "value": 4124
+    "value": 4212
    },
    {
     "name": "Axel S.",
-    "value": 3244
+    "value": 3648
    },
    {
     "name": "Диктаторский Ф.",
@@ -145,12 +145,12 @@
     "value": 8
    },
    {
-    "name": "Марина К.",
-    "value": 6
+    "name": "Axel S.",
+    "value": 7
    },
    {
-    "name": "Axel S.",
-    "value": 5
+    "name": "Марина К.",
+    "value": 6
    },
    {
     "name": "Диктаторский Ф.",
