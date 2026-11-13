@@ -1,9 +1,9 @@
 {
- "updated_at": "13.11.2026 08:02 МСК",
+ "updated_at": "13.11.2026 09:02 МСК",
  "salatnik": {
   "chats": 14,
   "users": 13,
-  "messages": 3393,
+  "messages": 3395,
   "commands_total": 27,
   "top_commands": [
    {
@@ -78,7 +78,7 @@
    },
    {
     "name": "Леха В.",
-    "value": 106
+    "value": 108
    },
    {
     "name": "Диктаторский Ф.",
