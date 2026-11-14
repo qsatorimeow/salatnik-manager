@@ -1,11 +1,15 @@
 {
- "updated_at": "14.11.2026 12:00 МСК",
+ "updated_at": "14.11.2026 12:30 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3694,
-  "commands_total": 94,
+  "messages": 3695,
+  "commands_total": 95,
   "top_commands": [
+   {
+    "name": "remind",
+    "value": 7
+   },
    {
     "name": "info",
     "value": 6
@@ -16,10 +20,6 @@
    },
    {
     "name": "bonus",
-    "value": 6
-   },
-   {
-    "name": "remind",
     "value": 6
    },
    {
@@ -74,7 +74,7 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 153
+    "value": 154
    },
    {
     "name": "Фея А.",
