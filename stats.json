@@ -1,10 +1,10 @@
 {
- "updated_at": "14.11.2026 10:05 МСК",
+ "updated_at": "14.11.2026 10:35 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3671,
-  "commands_total": 90,
+  "messages": 3672,
+  "commands_total": 92,
   "top_commands": [
    {
     "name": "info",
@@ -27,15 +27,15 @@
     "value": 5
    },
    {
+    "name": "top",
+    "value": 5
+   },
+   {
     "name": "remind",
     "value": 5
    },
    {
     "name": "getban",
-    "value": 4
-   },
-   {
-    "name": "top",
     "value": 4
    },
    {
@@ -62,7 +62,7 @@
    },
    {
     "name": "Axel S.",
-    "value": 276
+    "value": 277
    },
    {
     "name": "Марина К.",
