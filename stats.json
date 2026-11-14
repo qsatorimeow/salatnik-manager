@@ -1,22 +1,26 @@
 {
- "updated_at": "14.11.2026 14:00 МСК",
+ "updated_at": "14.11.2026 14:30 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3702,
-  "commands_total": 95,
+  "messages": 3724,
+  "commands_total": 103,
   "top_commands": [
    {
-    "name": "remind",
-    "value": 7
+    "name": "stats",
+    "value": 8
    },
    {
     "name": "info",
-    "value": 6
+    "value": 7
    },
    {
-    "name": "stats",
-    "value": 6
+    "name": "top",
+    "value": 7
+   },
+   {
+    "name": "remind",
+    "value": 7
    },
    {
     "name": "bonus",
@@ -27,16 +31,12 @@
     "value": 5
    },
    {
+    "name": "getban",
+    "value": 5
+   },
+   {
     "name": "nlist",
     "value": 5
-   },
-   {
-    "name": "top",
-    "value": 5
-   },
-   {
-    "name": "getban",
-    "value": 4
    },
    {
     "name": "unmute",
@@ -50,7 +50,7 @@
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1343
+    "value": 1353
    },
    {
     "name": "Фармин М.",
@@ -62,11 +62,11 @@
    },
    {
     "name": "Axel S.",
-    "value": 282
+    "value": 290
    },
    {
     "name": "Марина К.",
-    "value": 260
+    "value": 263
    },
    {
     "name": "Леха В.",
@@ -74,7 +74,7 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 154
+    "value": 155
    },
    {
     "name": "Фея А.",
@@ -103,20 +103,20 @@
     "value": 50702
    },
    {
+    "name": "Марина К.",
+    "value": 19400
+   },
+   {
+    "name": "Axel S.",
+    "value": 15993
+   },
+   {
     "name": "Игорь Г.",
     "value": 7965
    },
    {
     "name": "Алексей Б.",
-    "value": 6710
-   },
-   {
-    "name": "Марина К.",
-    "value": 6466
-   },
-   {
-    "name": "Axel S.",
-    "value": 3648
+    "value": 6888
    },
    {
     "name": "Диктаторский Ф.",
@@ -150,11 +150,11 @@
    },
    {
     "name": "Axel S.",
-    "value": 7
+    "value": 8
    },
    {
     "name": "Марина К.",
-    "value": 6
+    "value": 7
    },
    {
     "name": "Диктаторский Ф.",
