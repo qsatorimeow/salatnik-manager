@@ -1,5 +1,5 @@
 {
- "updated_at": "14.11.2026 12:30 МСК",
+ "updated_at": "14.11.2026 13:00 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
@@ -175,13 +175,17 @@
   ]
  },
  "events": {
-  "finished": 5,
+  "finished": 6,
   "avg_minutes": 0,
-  "commands_total": 42,
+  "commands_total": 55,
   "top_commands": [
    {
     "name": "event",
-    "value": 24
+    "value": 32
+   },
+   {
+    "name": "table",
+    "value": 5
    },
    {
     "name": "snick",
@@ -189,15 +193,15 @@
    },
    {
     "name": "top",
-    "value": 3
-   },
-   {
-    "name": "table",
-    "value": 3
+    "value": 4
    },
    {
     "name": "nlist",
     "value": 3
+   },
+   {
+    "name": "help",
+    "value": 2
    },
    {
     "name": "rnick",
@@ -212,14 +216,14 @@
     "value": 1
    },
    {
-    "name": "help",
+    "name": "restart",
     "value": 1
    }
   ],
   "top_hosts": [
    {
     "name": "Алексей Б.",
-    "value": 4
+    "value": 5
    },
    {
     "name": "Марина К.",
