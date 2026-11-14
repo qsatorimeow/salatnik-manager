@@ -1,13 +1,21 @@
 {
- "updated_at": "14.11.2026 09:05 МСК",
+ "updated_at": "14.11.2026 10:05 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 3665,
-  "commands_total": 81,
+  "messages": 3671,
+  "commands_total": 90,
   "top_commands": [
    {
     "name": "info",
+    "value": 6
+   },
+   {
+    "name": "stats",
+    "value": 6
+   },
+   {
+    "name": "bonus",
     "value": 6
    },
    {
@@ -15,11 +23,11 @@
     "value": 5
    },
    {
-    "name": "stats",
+    "name": "nlist",
     "value": 5
    },
    {
-    "name": "nlist",
+    "name": "remind",
     "value": 5
    },
    {
@@ -27,7 +35,7 @@
     "value": 4
    },
    {
-    "name": "bonus",
+    "name": "top",
     "value": 4
    },
    {
@@ -37,20 +45,12 @@
    {
     "name": "unwarn",
     "value": 3
-   },
-   {
-    "name": "top",
-    "value": 3
-   },
-   {
-    "name": "remind",
-    "value": 3
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1322
+    "value": 1327
    },
    {
     "name": "Фармин М.",
@@ -62,7 +62,7 @@
    },
    {
     "name": "Axel S.",
-    "value": 275
+    "value": 276
    },
    {
     "name": "Марина К.",
@@ -92,7 +92,7 @@
   "top_coins": [
    {
     "name": "Фармин М.",
-    "value": 112311
+    "value": 111305
    },
    {
     "name": "Блейз К.",
@@ -107,12 +107,12 @@
     "value": 7965
    },
    {
-    "name": "Марина К.",
-    "value": 6466
+    "name": "Алексей Б.",
+    "value": 6710
    },
    {
-    "name": "Алексей Б.",
-    "value": 4212
+    "name": "Марина К.",
+    "value": 6466
    },
    {
     "name": "Axel S.",
@@ -138,7 +138,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 10
+    "value": 11
    },
    {
     "name": "Νουρασύλ Λ.",
