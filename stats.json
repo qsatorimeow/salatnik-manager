@@ -1,9 +1,9 @@
 {
- "updated_at": "15.11.2026 14:21 МСК",
+ "updated_at": "15.11.2026 14:23 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 4032,
+  "messages": 4037,
   "commands_total": 112,
   "top_commands": [
    {
@@ -58,7 +58,7 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 362
+    "value": 364
    },
    {
     "name": "Axel S.",
@@ -82,7 +82,7 @@
    },
    {
     "name": "Бекжан С.",
-    "value": 88
+    "value": 91
    },
    {
     "name": "Диктаторский Ф.",
