@@ -1,10 +1,10 @@
 {
- "updated_at": "16.11.2026 08:43 МСК",
+ "updated_at": "16.11.2026 09:13 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 5199,
-  "commands_total": 161,
+  "messages": 5284,
+  "commands_total": 173,
   "top_commands": [
    {
     "name": "getid",
@@ -16,7 +16,7 @@
    },
    {
     "name": "staff",
-    "value": 10
+    "value": 11
    },
    {
     "name": "info",
@@ -31,54 +31,54 @@
     "value": 7
    },
    {
+    "name": "mute",
+    "value": 7
+   },
+   {
+    "name": "getban",
+    "value": 6
+   },
+   {
     "name": "bonus",
     "value": 6
    },
    {
-    "name": "getban",
-    "value": 5
-   },
-   {
-    "name": "nlist",
-    "value": 5
-   },
-   {
-    "name": "a",
-    "value": 5
+    "name": "clear",
+    "value": 6
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1754
+    "value": 1765
    },
    {
     "name": "Фармин М.",
-    "value": 1227
+    "value": 1258
    },
    {
     "name": "Axel S.",
-    "value": 469
+    "value": 473
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 409
+    "value": 410
    },
    {
     "name": "Марина К.",
-    "value": 323
+    "value": 330
    },
    {
     "name": "Бекжан С.",
-    "value": 271
+    "value": 279
    },
    {
     "name": "Леха В.",
-    "value": 230
+    "value": 232
    },
    {
     "name": "Игорь Г.",
-    "value": 186
+    "value": 207
    },
    {
     "name": "Фея А.",
