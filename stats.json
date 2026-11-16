@@ -1,10 +1,10 @@
 {
- "updated_at": "16.11.2026 09:43 МСК",
+ "updated_at": "16.11.2026 10:13 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 5299,
-  "commands_total": 173,
+  "messages": 5330,
+  "commands_total": 174,
   "top_commands": [
    {
     "name": "getid",
@@ -50,11 +50,11 @@
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1768
+    "value": 1771
    },
    {
     "name": "Фармин М.",
-    "value": 1260
+    "value": 1264
    },
    {
     "name": "Axel S.",
@@ -62,7 +62,7 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 410
+    "value": 411
    },
    {
     "name": "Марина К.",
@@ -70,15 +70,15 @@
    },
    {
     "name": "Бекжан С.",
-    "value": 282
+    "value": 293
    },
    {
     "name": "Леха В.",
-    "value": 232
+    "value": 235
    },
    {
     "name": "Игорь Г.",
-    "value": 210
+    "value": 219
    },
    {
     "name": "Фея А.",
@@ -92,7 +92,7 @@
   "top_coins": [
    {
     "name": "Фармин М.",
-    "value": 111305
+    "value": 112083
    },
    {
     "name": "Блейз К.",
@@ -116,19 +116,19 @@
    },
    {
     "name": "Алексей Б.",
-    "value": 7345
+    "value": 7464
    },
    {
     "name": "Диктаторский Ф.",
     "value": 790
    },
    {
-    "name": "Фея А.",
-    "value": 211
+    "name": "Бекжан С.",
+    "value": 431
    },
    {
-    "name": "Леха В.",
-    "value": 99
+    "name": "Фея А.",
+    "value": 211
    }
   ],
   "top_levels": [
@@ -138,7 +138,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 11
+    "value": 12
    },
    {
     "name": "Νουρασύλ Λ.",
