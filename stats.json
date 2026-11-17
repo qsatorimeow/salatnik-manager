@@ -1,9 +1,9 @@
 {
- "updated_at": "17.11.2026 12:39 МСК",
+ "updated_at": "17.11.2026 13:55 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 5998,
+  "messages": 5999,
   "commands_total": 196,
   "top_commands": [
    {
@@ -58,7 +58,7 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 492
+    "value": 493
    },
    {
     "name": "Axel S.",
