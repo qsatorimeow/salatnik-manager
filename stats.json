@@ -1,9 +1,9 @@
 {
- "updated_at": "17.11.2026 12:18 МСК",
+ "updated_at": "17.11.2026 12:29 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 5987,
+  "messages": 5997,
   "commands_total": 196,
   "top_commands": [
    {
@@ -54,7 +54,7 @@
    },
    {
     "name": "Фармин М.",
-    "value": 1453
+    "value": 1458
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Леха В.",
-    "value": 354
+    "value": 359
    },
    {
     "name": "Бекжан С.",
