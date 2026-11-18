@@ -1,10 +1,10 @@
 {
- "updated_at": "18.11.2026 13:12 МСК",
+ "updated_at": "18.11.2026 15:12 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 6625,
-  "commands_total": 209,
+  "messages": 6626,
+  "commands_total": 210,
   "top_commands": [
    {
     "name": "getid",
@@ -19,16 +19,16 @@
     "value": 14
    },
    {
+    "name": "zov",
+    "value": 9
+   },
+   {
     "name": "top",
     "value": 9
    },
    {
     "name": "mute",
     "value": 9
-   },
-   {
-    "name": "zov",
-    "value": 8
    },
    {
     "name": "getban",
@@ -62,7 +62,7 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 520
+    "value": 521
    },
    {
     "name": "Леха В.",
