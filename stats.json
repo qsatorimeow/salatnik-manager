@@ -1,9 +1,9 @@
 {
- "updated_at": "18.11.2026 10:12 МСК",
+ "updated_at": "18.11.2026 10:42 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 6569,
+  "messages": 6575,
   "commands_total": 206,
   "top_commands": [
    {
@@ -50,15 +50,15 @@
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 1965
+    "value": 1966
    },
    {
     "name": "Фармин М.",
-    "value": 1642
+    "value": 1643
    },
    {
     "name": "Axel S.",
-    "value": 554
+    "value": 556
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 416
+    "value": 418
    },
    {
     "name": "Бекжан С.",
