@@ -1,14 +1,14 @@
 {
- "updated_at": "19.11.2026 19:16 МСК",
+ "updated_at": "19.11.2026 19:22 МСК",
  "salatnik": {
   "chats": 13,
   "users": 13,
-  "messages": 7164,
-  "commands_total": 215,
+  "messages": 7176,
+  "commands_total": 216,
   "top_commands": [
    {
     "name": "getid",
-    "value": 27
+    "value": 28
    },
    {
     "name": "stats",
@@ -58,7 +58,7 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 585
+    "value": 592
    },
    {
     "name": "Axel S.",
