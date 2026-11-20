@@ -1,9 +1,9 @@
 {
- "updated_at": "20.11.2026 17:49 МСК",
+ "updated_at": "20.11.2026 18:19 МСК",
  "salatnik": {
   "chats": 13,
   "users": 14,
-  "messages": 7301,
+  "messages": 7305,
   "commands_total": 242,
   "top_commands": [
    {
@@ -74,7 +74,7 @@
    },
    {
     "name": "Бекжан С.",
-    "value": 432
+    "value": 435
    },
    {
     "name": "Игорь Г.",
@@ -86,7 +86,7 @@
    },
    {
     "name": "Диктаторский Ф.",
-    "value": 107
+    "value": 108
    }
   ],
   "top_coins": [
