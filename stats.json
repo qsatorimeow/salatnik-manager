@@ -1,9 +1,9 @@
 {
- "updated_at": "21.11.2026 00:49 МСК",
+ "updated_at": "21.11.2026 01:49 МСК",
  "salatnik": {
   "chats": 13,
   "users": 14,
-  "messages": 7526,
+  "messages": 7534,
   "commands_total": 244,
   "top_commands": [
    {
@@ -85,8 +85,8 @@
     "value": 162
    },
    {
-    "name": "Диктаторский Ф.",
-    "value": 110
+    "name": "Amir A.",
+    "value": 111
    }
   ],
   "top_coins": [
