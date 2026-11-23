@@ -1,10 +1,10 @@
 {
- "updated_at": "23.11.2026 13:57 МСК",
+ "updated_at": "23.11.2026 16:57 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 8284,
-  "commands_total": 333,
+  "messages": 8285,
+  "commands_total": 334,
   "top_commands": [
    {
     "name": "getid",
@@ -12,7 +12,7 @@
    },
    {
     "name": "zov",
-    "value": 26
+    "value": 27
    },
    {
     "name": "getban",
@@ -74,7 +74,7 @@
    },
    {
     "name": "Бекжан С.",
-    "value": 483
+    "value": 484
    },
    {
     "name": "Игорь Г.",
