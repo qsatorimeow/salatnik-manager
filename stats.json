@@ -1,9 +1,9 @@
 {
- "updated_at": "24.11.2026 23:24 МСК",
+ "updated_at": "25.11.2026 02:54 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 8803,
+  "messages": 8806,
   "commands_total": 351,
   "top_commands": [
    {
@@ -86,7 +86,7 @@
    },
    {
     "name": "Amir A.",
-    "value": 152
+    "value": 155
    }
   ],
   "top_coins": [
