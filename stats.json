@@ -1,14 +1,14 @@
 {
- "updated_at": "25.11.2026 21:08 МСК",
+ "updated_at": "25.11.2026 21:38 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 9308,
-  "commands_total": 376,
+  "messages": 9331,
+  "commands_total": 377,
   "top_commands": [
    {
     "name": "zov",
-    "value": 46
+    "value": 47
    },
    {
     "name": "getid",
@@ -54,23 +54,23 @@
    },
    {
     "name": "Фармин М.",
-    "value": 2268
+    "value": 2271
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 821
+    "value": 828
    },
    {
     "name": "Axel S.",
-    "value": 788
+    "value": 789
    },
    {
     "name": "Марина К.",
-    "value": 677
+    "value": 679
    },
    {
     "name": "Бекжан С.",
-    "value": 649
+    "value": 656
    },
    {
     "name": "Леха В.",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 393
+    "value": 396
    },
    {
     "name": "Фея А.",
