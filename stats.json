@@ -1,10 +1,10 @@
 {
- "updated_at": "27.11.2026 09:51 МСК",
+ "updated_at": "27.11.2026 10:21 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 9521,
-  "commands_total": 384,
+  "messages": 9524,
+  "commands_total": 386,
   "top_commands": [
    {
     "name": "zov",
@@ -27,6 +27,10 @@
     "value": 20
    },
    {
+    "name": "info",
+    "value": 12
+   },
+   {
     "name": "help",
     "value": 12
    },
@@ -35,22 +39,18 @@
     "value": 12
    },
    {
-    "name": "info",
-    "value": 11
-   },
-   {
-    "name": "mute",
+    "name": "top",
     "value": 10
    },
    {
-    "name": "clear",
+    "name": "mute",
     "value": 10
    }
   ],
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 2655
+    "value": 2657
    },
    {
     "name": "Фармин М.",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 412
+    "value": 413
    },
    {
     "name": "Фея А.",
@@ -112,11 +112,11 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 7965
+    "value": 8223
    },
    {
     "name": "Алексей Б.",
-    "value": 7464
+    "value": 7611
    },
    {
     "name": "Диктаторский Ф.",
@@ -146,11 +146,11 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 8
+    "value": 9
    },
    {
     "name": "Axel S.",
-    "value": 8
+    "value": 9
    },
    {
     "name": "Марина К.",
