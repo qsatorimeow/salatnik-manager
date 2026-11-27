@@ -1,10 +1,10 @@
 {
- "updated_at": "27.11.2026 18:51 МСК",
+ "updated_at": "27.11.2026 19:21 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 9712,
-  "commands_total": 387,
+  "messages": 9719,
+  "commands_total": 393,
   "top_commands": [
    {
     "name": "zov",
@@ -16,7 +16,7 @@
    },
    {
     "name": "getban",
-    "value": 26
+    "value": 29
    },
    {
     "name": "staff",
@@ -27,11 +27,11 @@
     "value": 20
    },
    {
-    "name": "info",
-    "value": 12
+    "name": "help",
+    "value": 13
    },
    {
-    "name": "help",
+    "name": "info",
     "value": 12
    },
    {
@@ -50,7 +50,7 @@
   "top_active": [
    {
     "name": "Алексей Б.",
-    "value": 2713
+    "value": 2714
    },
    {
     "name": "Фармин М.",
@@ -62,7 +62,7 @@
    },
    {
     "name": "Axel S.",
-    "value": 849
+    "value": 853
    },
    {
     "name": "Марина К.",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Игорь Г.",
-    "value": 427
+    "value": 429
    },
    {
     "name": "Фея А.",
@@ -92,7 +92,7 @@
   "top_coins": [
    {
     "name": "Фармин М.",
-    "value": 112247
+    "value": 112444
    },
    {
     "name": "Блейз К.",
@@ -104,7 +104,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 19400
+    "value": 19574
    },
    {
     "name": "Axel S.",
@@ -116,7 +116,7 @@
    },
    {
     "name": "Алексей Б.",
-    "value": 7611
+    "value": 7868
    },
    {
     "name": "Диктаторский Ф.",
@@ -154,7 +154,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 7
+    "value": 8
    },
    {
     "name": "Диктаторский Ф.",
