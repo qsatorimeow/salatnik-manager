@@ -1,9 +1,9 @@
 {
- "updated_at": "27.11.2026 17:51 МСК",
+ "updated_at": "27.11.2026 18:21 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 9657,
+  "messages": 9671,
   "commands_total": 387,
   "top_commands": [
    {
@@ -58,19 +58,19 @@
    },
    {
     "name": "Νουρασύλ Λ.",
-    "value": 884
+    "value": 888
    },
    {
     "name": "Axel S.",
-    "value": 840
+    "value": 843
    },
    {
     "name": "Марина К.",
-    "value": 703
+    "value": 708
    },
    {
     "name": "Бекжан С.",
-    "value": 664
+    "value": 665
    },
    {
     "name": "Леха В.",
@@ -85,8 +85,8 @@
     "value": 164
    },
    {
-    "name": "Amir A.",
-    "value": 158
+    "name": "Диктаторский Ф.",
+    "value": 159
    }
   ],
   "top_coins": [
