@@ -1,14 +1,14 @@
 {
- "updated_at": "28.11.2026 13:47 МСК",
+ "updated_at": "28.11.2026 14:17 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
-  "messages": 10094,
-  "commands_total": 398,
+  "messages": 10100,
+  "commands_total": 400,
   "top_commands": [
    {
     "name": "zov",
-    "value": 50
+    "value": 51
    },
    {
     "name": "getid",
@@ -54,11 +54,11 @@
    },
    {
     "name": "Фармин М.",
-    "value": 2342
+    "value": 2344
    },
    {
     "name": "Axel S.",
-    "value": 947
+    "value": 950
    },
    {
     "name": "Νουρασύλ Λ.",
@@ -66,7 +66,7 @@
    },
    {
     "name": "Марина К.",
-    "value": 724
+    "value": 725
    },
    {
     "name": "Бекжан С.",
@@ -92,7 +92,7 @@
   "top_coins": [
    {
     "name": "Фармин М.",
-    "value": 112444
+    "value": 113218
    },
    {
     "name": "Блейз К.",
@@ -104,11 +104,11 @@
    },
    {
     "name": "Марина К.",
-    "value": 21006
+    "value": 21406
    },
    {
     "name": "Axel S.",
-    "value": 17563
+    "value": 17805
    },
    {
     "name": "Алексей Б.",
@@ -141,12 +141,12 @@
     "value": 12
    },
    {
-    "name": "Νουρασύλ Λ.",
-    "value": 10
+    "name": "Марина К.",
+    "value": 11
    },
    {
-    "name": "Марина К.",
-    "value": 9
+    "name": "Νουρασύλ Λ.",
+    "value": 10
    },
    {
     "name": "Axel S.",
