@@ -1,10 +1,10 @@
 {
- "updated_at": "28.11.2026 10:47 МСК",
+ "updated_at": "28.11.2026 11:17 МСК",
  "salatnik": {
   "chats": 14,
   "users": 14,
   "messages": 10039,
-  "commands_total": 396,
+  "commands_total": 398,
   "top_commands": [
    {
     "name": "zov",
@@ -16,7 +16,7 @@
    },
    {
     "name": "getban",
-    "value": 29
+    "value": 30
    },
    {
     "name": "staff",
@@ -43,7 +43,7 @@
     "value": 10
    },
    {
-    "name": "mute",
+    "name": "gbanpl",
     "value": 10
    }
   ],
